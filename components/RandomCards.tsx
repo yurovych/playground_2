@@ -12,7 +12,7 @@ const mockCards = [
   { value: 5, color: 'bg-blue-700' },
 ]
 
-const MainPage = () => {
+const RandomCards = () => {
   const [cards, setCards] = useState(mockCards)
   const [shuffleKey, setShuffleKey] = useState(0)
 
@@ -30,7 +30,7 @@ const MainPage = () => {
   }
 
   return (
-    <div className="flex flex-col items-center pt-30 gap-5">
+    <div className="flex flex-col items-center pt-10 gap-5">
       <div className={'flex bg-gray-200 w-1/2 p-2 rounded-xl gap-2'}>
         {cards.map((card) => (
           <OneCard key={`${shuffleKey}-${card.value}`} data={card} />
@@ -51,4 +51,4 @@ const MainPage = () => {
   )
 }
 
-export default MainPage
+export default RandomCards
